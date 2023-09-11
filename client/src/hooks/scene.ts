@@ -25,7 +25,7 @@ export const useGameScene = () => {
     camera.attachControl(cvsRef.value, false)
 
     var light = new HemisphericLight("light1", new Vector3(0, 1, 0), scene)
-
+    scene.addLight(light)
     var sphere = MeshBuilder.CreateSphere(
       "sphere1",
       { segments: 16, diameter: 2, sideOrientation: Mesh.FRONTSIDE },
@@ -39,6 +39,7 @@ export const useGameScene = () => {
       { width: 6, height: 6, subdivisions: 2, updatable: false },
       scene
     )
+    scene.addMesh(ground)
     // Return the created scene
     return scene
   }
