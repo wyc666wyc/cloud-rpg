@@ -8,6 +8,7 @@ import {
   MeshBuilder,
   HemisphericLight,
 } from "@babylonjs/core"
+import { createMenu } from '@/core/object'
 
 export const useGameScene = () => {
   const cvsRef = ref<HTMLCanvasElement>()
@@ -44,6 +45,7 @@ export const useGameScene = () => {
     return scene
   }
   onMounted(() => {
+    const { btn1 } = createMenu()
     const scene = createScene()
     engine.runRenderLoop(function () {
       scene.render()
