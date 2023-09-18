@@ -7,3 +7,21 @@ html, body, #app {
 #app {
   overflow-y: hidden;
 }
+.shake {
+  display: inline-block;
+  animation: shaking infinite 0.2s;
+}
+.finish {
+  transition: all 1s;
+}
+@keyframes shaking {
+  0%, 50%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(10deg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
+}
