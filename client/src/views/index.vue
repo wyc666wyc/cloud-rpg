@@ -1,3 +1,3 @@
 <template>
-  index
+  <div v-shake>123</div>
 </template>
